@@ -1,8 +1,8 @@
 # 📝 Exam Management System
 
-A Laravel-based **Exam Management System** designed to manage online tests, questions, student attempts, scoring, and results.
+A Laravel-based **Exam Management System** for managing online tests, questions, student attempts, scoring, and results.
 
-The system provides separate functionality for *Teacher, and Student** users with role-based access control.
+The system provides separate functionality for **Teacher and Student** users with role-based access control.
 
 ## 🚀 Features
 
@@ -22,27 +22,23 @@ The system provides separate functionality for *Teacher, and Student** users wit
 
 ## 👥 User Roles
 
-### Admin
+### 👨‍🏫 Teacher
 
-* Manage users
-* Manage system data
-* Control user roles and status
-
-### Teacher
-
-* Create tests
-* Add questions and options
-* Set marks and negative marking
-* Publish or close tests
+* Create and manage tests
+* Add questions and multiple-choice options
+* Set marks per question
+* Set negative marking
+* Publish, draft, or close tests
 * View student attempts and results
 
-### Student
+### 👨‍🎓 Student
 
 * View available tests
 * Attempt online quizzes
 * Submit answers
 * View scores and results
 * Review selected and correct answers
+* View previous attempts
 
 ## 🛠️ Technologies Used
 
@@ -59,8 +55,6 @@ The system provides separate functionality for *Teacher, and Student** users wit
 
 ## 🗄️ Main Database Tables
 
-The application uses several tables to manage the examination workflow:
-
 * `users`
 * `tests`
 * `questions`
@@ -70,37 +64,39 @@ The application uses several tables to manage the examination workflow:
 
 ## ⚙️ Installation
 
-Clone the repository:
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/your-username/your-repository.git
 ```
 
-Go to the project directory:
+### 2. Go to the Project Directory
 
 ```bash
 cd your-repository
 ```
 
-Install PHP dependencies:
+### 3. Install Dependencies
 
 ```bash
 composer install
 ```
 
-Create the environment file:
+### 4. Create Environment File
 
 ```bash
 copy .env.example .env
 ```
 
-Generate the application key:
+### 5. Generate Application Key
 
 ```bash
 php artisan key:generate
 ```
 
-Configure your database in `.env`:
+### 6. Configure Database
+
+Update your `.env` file:
 
 ```env
 DB_DATABASE=exam-manegment
@@ -108,13 +104,13 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-Run migrations:
+### 7. Run Migrations
 
 ```bash
 php artisan migrate
 ```
 
-Start the Laravel development server:
+### 8. Start Development Server
 
 ```bash
 php artisan serve
@@ -126,33 +122,26 @@ Open the application:
 http://127.0.0.1:8000
 ```
 
-## 📸 Project Workflow
+## 🔄 Application Workflow
 
 ```text
-Admin
-  │
-  ├── Manage Users
-  │
-  └── Manage System
-        │
-        ▼
 Teacher
-  │
-  ├── Create Test
-  ├── Add Questions
-  ├── Add Options
-  └── Publish Test
-        │
-        ▼
-Student
-  │
-  ├── View Tests
-  ├── Attempt Quiz
-  ├── Submit Answers
-  └── View Result
-        │
-        ▼
-Automatic Score Calculation
+   │
+   ├── Create Test
+   ├── Add Questions
+   ├── Add Options
+   └── Publish Test
+          │
+          ▼
+       Student
+          │
+          ├── View Tests
+          ├── Attempt Quiz
+          ├── Submit Answers
+          └── View Result
+                 │
+                 ▼
+        Automatic Score Calculation
 ```
 
 ## 📊 Scoring System
@@ -160,21 +149,21 @@ Automatic Score Calculation
 The system supports:
 
 * Correct answer marks
-* Wrong answer negative marks
-* Unanswered questions
+* Negative marking for wrong answers
+* Unanswered question tracking
 * Total score calculation
-* Correct and wrong answer count
+* Correct answer count
+* Wrong answer count
 
 ## 🔮 Future Improvements
 
-* Timer-based automatic quiz submission
-* Email notifications
-* Advanced result analytics
-* PDF result generation
-* Teacher-wise test reports
-* Student performance charts
-* Question randomization
-* REST API integration
+* ⏱️ Automatic timer-based submission
+* 📧 Email notifications
+* 📄 PDF result generation
+* 📊 Advanced performance analytics
+* 🔀 Question randomization
+* 🌐 REST API integration
+* 👨‍💼 Admin panel and administration features
 
 ## 👨‍💻 Developer
 
@@ -182,6 +171,5 @@ The system supports:
 
 B.Tech Computer Science & Engineering
 
----
 
 ⭐ If you find this project useful, consider giving the repository a star.
