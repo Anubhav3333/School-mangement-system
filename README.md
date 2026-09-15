@@ -1,59 +1,187 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 📝 Exam Management System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A Laravel-based **Exam Management System** designed to manage online tests, questions, student attempts, scoring, and results.
 
-## About Laravel
+The system provides separate functionality for **Admin, Teacher, and Student** users with role-based access control.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🚀 Features
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+* 🔐 Role-based Authentication
+* 👨‍🏫 Teacher Dashboard
+* 👨‍🎓 Student Dashboard
+* 📝 Create and Manage Tests
+* ❓ Create Questions with Multiple Options
+* ✅ Correct Answer Management
+* 🎯 Online Quiz Attempt
+* 📊 Automatic Result Calculation
+* ➕ Negative Marking Support
+* 📋 Student Attempt History
+* 🔍 View Selected and Correct Answers
+* 🔒 User Status Management
+* 📱 Responsive Bootstrap UI
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 👥 User Roles
 
-## Learning Laravel
+### Admin
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+* Manage users
+* Manage system data
+* Control user roles and status
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Teacher
 
-## Laravel Sponsors
+* Create tests
+* Add questions and options
+* Set marks and negative marking
+* Publish or close tests
+* View student attempts and results
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### Student
 
-### Premium Partners
+* View available tests
+* Attempt online quizzes
+* Submit answers
+* View scores and results
+* Review selected and correct answers
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+## 🛠️ Technologies Used
 
-## Contributing
+* **Laravel 12**
+* **PHP 8.2+**
+* **MySQL**
+* **Bootstrap 5**
+* **JavaScript**
+* **jQuery**
+* **Blade Templates**
+* **Eloquent ORM**
+* **SweetAlert**
+* **Bootstrap Icons**
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 🗄️ Main Database Tables
 
-## Code of Conduct
+The application uses several tables to manage the examination workflow:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+* `users`
+* `tests`
+* `questions`
+* `question_options`
+* `test_attempts`
+* `attempt_answers`
 
-## Security Vulnerabilities
+## ⚙️ Installation
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Clone the repository:
 
-## License
+```bash
+git clone https://github.com/your-username/your-repository.git
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Go to the project directory:
+
+```bash
+cd your-repository
+```
+
+Install PHP dependencies:
+
+```bash
+composer install
+```
+
+Create the environment file:
+
+```bash
+copy .env.example .env
+```
+
+Generate the application key:
+
+```bash
+php artisan key:generate
+```
+
+Configure your database in `.env`:
+
+```env
+DB_DATABASE=exam-manegment
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+Run migrations:
+
+```bash
+php artisan migrate
+```
+
+Start the Laravel development server:
+
+```bash
+php artisan serve
+```
+
+Open the application:
+
+```text
+http://127.0.0.1:8000
+```
+
+## 📸 Project Workflow
+
+```text
+Admin
+  │
+  ├── Manage Users
+  │
+  └── Manage System
+        │
+        ▼
+Teacher
+  │
+  ├── Create Test
+  ├── Add Questions
+  ├── Add Options
+  └── Publish Test
+        │
+        ▼
+Student
+  │
+  ├── View Tests
+  ├── Attempt Quiz
+  ├── Submit Answers
+  └── View Result
+        │
+        ▼
+Automatic Score Calculation
+```
+
+## 📊 Scoring System
+
+The system supports:
+
+* Correct answer marks
+* Wrong answer negative marks
+* Unanswered questions
+* Total score calculation
+* Correct and wrong answer count
+
+## 🔮 Future Improvements
+
+* Timer-based automatic quiz submission
+* Email notifications
+* Advanced result analytics
+* PDF result generation
+* Teacher-wise test reports
+* Student performance charts
+* Question randomization
+* REST API integration
+
+## 👨‍💻 Developer
+
+**Anubhav Srivastava**
+
+B.Tech Computer Science & Engineering
+
+---
+
+⭐ If you find this project useful, consider giving the repository a star.
