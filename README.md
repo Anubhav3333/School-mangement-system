@@ -2,7 +2,7 @@
 
 A Laravel-based **Exam Management System** designed to manage online tests, questions, student attempts, scoring, and results.
 
-The system provides separate functionality for **Admin, Teacher, and Student** users with role-based access control.
+The system provides separate functionality for *Teacher, and Student** users with role-based access control.
 
 ## 🚀 Features
 
